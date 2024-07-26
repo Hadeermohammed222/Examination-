@@ -1,0 +1,13 @@
+h3{
+    color:rgb(26,40,65);
+    text-align:center;
+}
+p{
+    text-align: center;
+    color:rgba(128, 128, 128, 0.358)(128, 128, 128, 0.358);
+}
+.box-text{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}

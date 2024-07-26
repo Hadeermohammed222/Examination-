@@ -1,0 +1,139 @@
+/***** start slider ***/
+.carousel-item,
+.carousel-inner
+{
+    height:calc(100vh - 80px);
+    overflow: hidden;
+}
+.overlap{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0%;
+    left:0%;
+    bottom: 0%;
+    right:0%;
+    z-index: 1;
+    background-color:rgba(0, 0, 0, 0.212);
+}
+.carousel-inner img
+{
+   width:100%;
+   height:100%;
+   margin-bottom:20px;
+}
+.homeText
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    text-align: center;
+    z-index: 2;
+}
+.homeText .btns button{
+    color:white;
+    padding:10px 15px;
+    background-color:var(--lightGray-color);
+    border-color:transparent;
+    margin-right:10px;  
+    border-radius: 5px; 
+}
+/******** end of slider *************/
+/*********** start of who we are *******/
+.who_we_are
+{
+   text-align: center;
+}
+.who_we_are img
+{
+   margin-bottom:20px;
+}
+.who_we_are p
+{
+  width:80%;
+  margin:20px auto;
+}
+.who_we_are button
+{
+   background-color:var(--main-color);
+   color:white;
+   border-color:transparent;
+   padding:10px;
+}
+/*********** end of who we are *******/
+/*********** start of application ******/
+.application .app{
+    position: relative;
+    width:calc(100% / 4);
+    gap:1%;
+    cursor: pointer;
+}
+.overlap-app{
+    position: absolute;
+    top:0%;
+    left:0%;
+    bottom:0%;
+    right:0%;
+    border:5px;
+    border-radius:5px;
+    display:none;
+    background-color:rgba(245, 222, 179, 0.394);
+}
+.app:hover .overlap-app{
+    display: block;
+
+}
+.application img
+{
+  width:100%;
+  height:100%;
+}
+.app h3
+{
+   color:var(--main-color);
+}
+.overlap-box
+{
+   position: relative;
+   height:100%;
+}
+.overlap-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.overlap-text p
+{
+     font-size:12px;
+}
+.app button{
+    background-color: var(--main-color);
+    border-color:transparent;
+    color:white;
+    padding:5px;
+}
+/*********** end of application ******/
+/*********** start_journey ***********/
+.start_journey{
+    background-color:var(--main-color);
+}
+.start_journey .container{
+    text-align: center;
+}
+.start_journey h3{
+    color:white;
+}
+.start_journey p{
+    color:var(--lightGray-color);
+}
+.start_journey button{
+    padding:10px 20px;
+    background-color:var(--lightGray-color);
+    color:white;
+    border-color:transparent;
+}
+/*********** end_journey ***********/

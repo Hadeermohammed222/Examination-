@@ -1,0 +1,118 @@
+{
+  "questions": [
+    {
+      "question": " what is the largest mammal",
+      "type": "multiple_choose",
+      "options": [
+        "rat",
+        "elephanet",
+        "blue whale"
+      ],
+      "answer": "blue whale",
+      "id": "b6ce"
+    },
+    {
+      "id": "5755",
+      "question": "what is the capital of france?",
+      "type": "multiple_choose",
+      "options": [
+        "berln",
+        "madrid",
+        "paris"
+      ],
+      "answer": "paris"
+    },
+    {
+      "id": "6aff",
+      "question": " Which of these is a programming language?",
+      "type": "multiple_choose",
+      "options": [
+        " Python",
+        "Snake ",
+        " Elephant"
+      ],
+      "answer": "Python "
+    },
+    {
+      "id": "4b5a",
+      "question": " What is the largest planet in our solar system?",
+      "type": "multiple_choice",
+      "options": [
+        " Earth",
+        "Jupiter ",
+        "Saturn "
+      ],
+      "answer": " Jupiter "
+    },
+    {
+      "id": "5afc",
+      "question": " Which planet is known as the Red Planet?",
+      "type": "multiple_choice",
+      "options": [
+        " Mars",
+        " Venus",
+        " Mercury"
+      ],
+      "answer": " Mars"
+    },
+    {
+      "id": "4ebe",
+      "question": " What is the smallest prime number?",
+      "type": "multiple_choice",
+      "options": [
+        " 0",
+        " 1",
+        "2 "
+      ],
+      "answer": " 2"
+    },
+    {
+      "question": " In which year did the Titanic sink?",
+      "type": "multiple_choice",
+      "options": [
+        " 1905",
+        "1912 ",
+        " 1918"
+      ],
+      "answer": " 1912 ",
+      "id": "cf6a"
+    }
+  ],
+  "users": [
+    {
+      "id": "20f9",
+      "first_name": "hadeer",
+      "email": "hm8830733@gmail.com",
+      "password": "QSX123",
+      "reset_password": "QSX123"
+    },
+    {
+      "id": "abc9",
+      "first_name": "admain",
+      "email": "hm8830733@gmail.com",
+      "password": "QS123",
+      "reset_password": "QS123"
+    },
+    {
+      "id": "682a",
+      "first_name": "admain",
+      "email": "hm8830733@gmail.com",
+      "password": "QS123",
+      "reset_password": "QS123"
+    },
+    {
+      "id": "3903",
+      "first_name": "hadeer",
+      "email": "hm8830733@gmail.com",
+      "password": "QWEASD",
+      "reset_password": "QWEASD"
+    },
+    {
+      "id": "6b5a",
+      "first_name": "hadeer",
+      "email": "hm8830733@gmail.com",
+      "password": "QSWE",
+      "reset_password": "QSWE"
+    }
+  ]
+}

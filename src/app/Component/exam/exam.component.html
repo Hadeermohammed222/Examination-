@@ -1,0 +1,13 @@
+<div class="container pt-3">
+    <div *ngFor="let dt of ques_api; let i = index">
+        <p>{{ i + 1 }}. {{ dt.question }}</p>
+        <div *ngFor="let option of dt.options">
+          <label>
+            <input type="radio" name="question-{{ i }}" [value]="option"> {{ option }}
+          </label>
+        </div>
+      </div>
+      <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
+      
+      <p>Your current score: {{ score }} / {{ques_api.length}}</p>
+</div>  

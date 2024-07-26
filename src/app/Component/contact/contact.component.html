@@ -1,0 +1,76 @@
+<section>
+    <div class="container-fluid h-80 pt-4">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="../../../assets/Images/proxy-image (6).jpg"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <!------- start form --------->
+          <form [formGroup]=" contactForm">
+            
+            <!-- Email input -->
+            <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <input formControlName="email" type="email" id="form3Example3c1" class="form-control" />
+                  <label for="email" class="form-label" for="form3Example3c1">Your Email</label>
+                  <!-- error-->
+                  <div *ngIf="contactForm.get('email')?.errors && contactForm.get('email')?.touched"
+                      class="p-1 text-primary-emphasis  text-white rounded-3 error">
+                       <p *ngIf="contactForm.get('email')?.getError('required')">email is required</p>
+                       <p *ngIf="contactForm.get('email')?.getError('email')">email is not valid</p>
+                  </div>
+                  <!-- error -->
+                </div>
+            </div>
+            <!-- Email input-->
+            <!-- Name input -->
+            <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <input formControlName = "username" 
+                     type="text" 
+                     id="form3Example1c"
+                      class="form-control"
+                      minlength="3"
+                      maxlength="20" />
+                  <label for="username" class="form-label" for="form3Example1c">Your Username</label>
+                  <!-- error-->
+                  <div *ngIf="contactForm.get('username')?.errors && contactForm.get('username')?.touched"
+                      class="p-1 text-primary-emphasis text-white rounded-3 error">
+                       <p *ngIf="contactForm.get('username')?.getError('required')">username is required</p>
+                       <p *ngIf="contactForm.get('username')?.getError('minlength')">minlength of username is 3</p>
+                       <p *ngIf="contactForm.get('username')?.getError('maxlength')">maxlength of username is 20</p>
+                      
+                  </div>
+                  <!-- error -->
+                </div>
+            </div>
+  
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                  <textarea 
+                      type="password" id="form3Example4cd"
+                      class="form-control" minlength="3" maxlength="6"
+                      placeholder="Enter Your Messaage"
+                    ></textarea>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                <button  
+                    type="button" 
+                    data-mdb-button-init data-mdb-ripple-init 
+                    class="btn btn-primary btn-lg"
+                >Send</button>
+              </div>
+
+          </form>
+          <!------- end form ------------>
+        </div>
+      </div>
+    </div>  
+</section>
+

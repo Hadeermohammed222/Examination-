@@ -1,0 +1,27 @@
+footer{
+    padding:30px 0px;
+    background-color:rgba(0, 0, 0, 0.818);
+}
+footer .logo,
+footer .rights
+{
+    text-align: center;
+}
+footer i
+{
+    color:var(--lightGray-color);
+    display:inline-block;
+    margin-right:5px;
+    border:1px solid var(--lightGray-color);
+    padding:10px;
+    border-radius:5px;
+}
+footer p
+{
+    margin-top:15px;
+    color:var(--white-color);
+}
+footer a
+{
+    color:var(--white-color);
+}

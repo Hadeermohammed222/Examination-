@@ -1,0 +1,8 @@
+.container{
+    height:63.4vh;
+}
+.container img{
+    display:block;
+    width:300px;
+    margin:30px auto;
+}

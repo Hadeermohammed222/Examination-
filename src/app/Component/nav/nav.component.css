@@ -1,0 +1,11 @@
+.navbar{
+    background-color:var(--main-color);
+    height:80px;
+}
+nav  a {
+    color:var(--white-color);
+}
+nav button{
+    background-color: transparent;
+    border:2px solid var(--lightGray-color);
+}
