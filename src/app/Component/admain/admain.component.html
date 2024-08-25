@@ -1,83 +1,4 @@
- <!-- <nav class="navbar navbar-light bg-dark">
-  <div class="container-fluid">
-     <div class="d-flex justify-content-end">
-      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="clear()">Add Question</button>
-     </div>
-  </div>
- </nav>
- 
- <table class="table mt-4">
-    <thead>
-      <tr>
-        <th scope="col">S.Id</th>
-        <th scope="col">Question</th>
-        <th scope="col">Type</th>
-        <th scope="col">Option1</th>
-        <th scope="col">Option2</th>
-        <th scope="col">Option3</th>
-        <th scope="col">Answer</th>
-        <th scope="col">Action</th>
-      <tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let dt of ques_api;let i=index">
-              <td>{{i+1}}</td>
-              <td>{{dt.question}}</td>
-              <td>{{dt.type}}</td>
-              <td *ngFor="let option of dt.options">{{option}}</td>
-              <td>{{dt.answer}}</td>
-              <td>
-                <button class="btn btn-info mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Edit(dt)">Edit</button>
-                <button class="btn btn-info" (click)="Delete(dt.id)">Delete</button>
-              </td>
-        </tr>
-      </tbody>
- </table>
 
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div style="background:blue;"class="modal-header">
-        <h1 style="color:aliceblue;font-size:26px;margin-left:62px;font-weight:620;" class="modal-title fs-5" id="exampleModalLabel">EXAMINATION SYSTEM</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form [formGroup]="myGroup" >
-          <div class="mb-3">
-            <label for="exampleInputEmail17" class="form-label">Question</label>
-            <input type="text" formControlName = "question" [(ngModel)]="question.question" class="form-control"  id="exampleInputEmail17" aria-describedby="emailHelp" />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail16" class="form-label">Type</label>
-            <input type="text" formControlName = "type" [(ngModel)]="question.type" class="form-control"   id="exampleInputEmail16" aria-describedby="emailHelp" >
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail15" class="form-label">Option1</label>
-            <input type="text" formControlName = "option1" [(ngModel)]="question.options[0]" class="form-control"   id="exampleInputEmail15" aria-describedby="emailHelp" />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail14" class="form-label">Option2</label>
-            <input type="text"  [(ngModel)]="question.options[1]"  formControlName = "option2" class="form-control" id="exampleInputEmail14" aria-describedby="emailHelp"/>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail13" class="form-label">Option3</label>
-            <input type="text"  [(ngModel)]="question.options[2]"  formControlName = "option3" class="form-control" id="exampleInputEmail13" aria-describedby="emailHelp" />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail12"  class="form-label">Answer</label>
-            <input type="text" [(ngModel)]="question.answer" formControlName = "answer" class="form-control" id="exampleInputEmail11" aria-describedby="emailHelp" />
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer "style="background:blue">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" (click)="Add()">Add</button>
-        <button type="button" class="btn btn-success" (click)="Update(admainForm)">Edit</button>
-      </div>
-    </div>
-  </div>
-</div> --> 
 <nav class="navbar navbar-light bg-dark">
   <div class="container-fluid">
     <div class="d-flex justify-content-end">
@@ -109,7 +30,7 @@
         <td>{{dt.answer}}</td>
         <td>
           <button class="btn btn-info mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Edit(dt)">Edit</button>
-          <button class="btn btn-danger" (click)="Delete(dt.id)">Delete</button>
+          <button class="btn btn-danger" (click)="Delete(dt.id);refresh();">Delete</button>
         </td>
       </tr>
     </tbody>
@@ -146,8 +67,8 @@
       </div>
       <div class="modal-footer bg-primary">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" (click)="Add()">Add</button>
-        <button type="button" class="btn btn-success" (click)="Update(admainForm)">Edit</button>
+        <button type="button" class="btn btn-success" (click)="Add();refresh();">Add</button>
+        <button type="button" class="btn btn-success" (click)="Update();refresh();">Edit</button>
       </div>
     </div>
   </div>
