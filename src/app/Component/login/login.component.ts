@@ -31,20 +31,27 @@ export class LoginComponent implements OnInit {
       this.data = res;
   });
   }
-
-    formsignin(form:FormGroup):void{
-      if(form.valid){
+  formsignin(form: FormGroup): void {
+    if (form.valid) {
       this.users = this.data.find(user => user.first_name === this.username && user.password === this.password);
-      if(this.users && this.users.first_name == "admain"){
-        this.router.navigate(['/admain']);
-      }
-      else if(this.users){
-        this.router.navigate(['/home']);
-      }
-      else{
+      
+      if (this.users) {
+        // Set user authentication status
+        this.authService.setAuthenticated(true);
+        
+        // Navigate to the appropriate page based on user role
+        if (this.users.first_name === "admain") {
+          this.router.navigate(['/admain']);
+        } else {
+          this.router.navigate(['/exam']);
+        }
+      } else {
+        // If no match found, redirect to register or show error
+        this.authService.setAuthenticated(false);
         this.router.navigate(['/register']);
       }
-     } 
     }
+  }
+      
    
 }

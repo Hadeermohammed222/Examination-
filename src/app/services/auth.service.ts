@@ -8,9 +8,16 @@ import { Observable } from 'rxjs';
 
 export class AuthService{
   private loggedIn: boolean = false;
-  baseUrl:string = "http://localhost:3005/users";
+  baseUrl:string = "https://exam-back-beta.vercel.app/users";
+  private isAuthenticatedStatus: boolean = false;
   constructor(private http: HttpClient) { }
+  setAuthenticated(status: boolean): void {
+    this.isAuthenticatedStatus = status;
+  }
 
+  isAuthenticated(): boolean {
+    return this.isAuthenticatedStatus;
+  }
     getUsers(): Observable<any>{
       return this.http.get<any>(this.baseUrl);
     }

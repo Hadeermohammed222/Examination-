@@ -9,3 +9,9 @@ nav button{
     background-color: transparent;
     border:2px solid var(--lightGray-color);
 }
+
+@media (max-width: 991px) {
+    nav a {
+        color:black;
+    }
+}

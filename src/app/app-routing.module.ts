@@ -10,16 +10,17 @@ import{AdmainComponent} from './Component/admain/admain.component';
 import { AboutComponent } from './Component/about/about.component';
 import {ExamComponent} from './Component/exam/exam.component';
 import { ResultsComponent } from './Component/results/results.component';
-
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  { path: 'exam', component: ExamComponent },
-  { path: 'admain', component: AdmainComponent },
+  { path: 'exam', component: ExamComponent, canActivate: [AuthGuard] },
+  {path: 'admain', component: AdmainComponent },
   {path:'results',component:ResultsComponent},
+  {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'**',component:HomeComponent},
 ];
 

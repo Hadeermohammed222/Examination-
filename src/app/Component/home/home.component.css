@@ -137,3 +137,52 @@
     border-color:transparent;
 }
 /*********** end_journey ***********/
+@media (max-width: 767px) {
+    .carousel-inner {
+      height: 50vh;
+    }
+    .homeText h1 {
+      font-size: 24px;
+    }
+    .homeText p {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 767px) {
+    .start_journey h3 {
+      font-size: 20px;
+    }
+    .start_journey p {
+      font-size: 14px;
+    }
+    .start_journey button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .application .app {
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .application .app {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .image_who_we{
+      max-width:150px;
+    }
+    .homeText h1{
+      font-size:15px;
+    }
+    .btns button{
+      width:fit-content;
+      padding:0px;
+      margin-bottom:5px;
+      font-size:9px;
+    } 
+  }
+  

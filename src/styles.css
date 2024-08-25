@@ -16,6 +16,10 @@
 section{
   padding:50px 0px;
 }
+body{
+  position: relative;
+  min-height:78.5vh;
+}
 body::-webkit-scrollbar {
   width: 0.9em;
 }

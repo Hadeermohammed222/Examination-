@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ExaminationService {
 
-  private baseUrl = 'http://localhost:3005';
+  private baseUrl = 'https://exam-back-beta.vercel.app/questions';
 
   constructor(private http: HttpClient) { }
 

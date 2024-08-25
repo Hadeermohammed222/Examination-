@@ -3,6 +3,7 @@
 }
 .container img{
     display:block;
-    width:300px;
+    max-width:300px;
+    min-width:150px;
     margin:30px auto;
 }

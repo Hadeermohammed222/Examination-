@@ -1,8 +1,77 @@
-
+/* 
 .modal-body{
  width:100%;
 }
 .table{
     width:95%;
     margin:auto;
-}
+} */
+.modal-body {
+    width: 100%;
+  }
+  
+  .table {
+    width: 100%;
+    margin: auto;
+  }
+  button{
+    margin-bottom:5px;
+  }
+  
+  @media (max-width: 576px) {
+    .table th, .table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .modal-dialog {
+      max-width: 95%;
+      margin: auto;
+    }
+  
+    .modal-header h1 {
+      font-size: 20px;
+    }
+  }
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+  
+  @media (max-width: 767px) {
+    /* Hide the table headers on small screens */
+    .table thead {
+      display: none;
+    }
+  
+    /* Display rows as block elements */
+    .table tbody tr {
+      display: block;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
+    }
+  
+    /* Display table cells as block elements */
+    .table tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      text-align:center;
+    }
+  
+    /* Display table cell labels before each data value */
+    .table tbody td::before {
+      content: attr(data-label);
+      flex-basis: 50%;
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    /* Adjust action buttons */
+    .table tbody td:last-child {
+      text-align:center;
+    }
+  }
+  
