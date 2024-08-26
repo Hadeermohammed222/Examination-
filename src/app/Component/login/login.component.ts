@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         this.authService.setAuthenticated(true);
         
         // Navigate to the appropriate page based on user role
-        if (this.users.first_name === "admain") {
+        if (this.users.first_name === "admains") {
           this.router.navigate(['/admain']);
         } else {
           this.router.navigate(['/exam']);
