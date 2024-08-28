@@ -13,7 +13,7 @@
     left:0%;
     bottom: 0%;
     right:0%;
-    z-index: 1;
+    z-index: -1;
     background-color:rgba(0, 0, 0, 0.212);
 }
 .carousel-inner img
@@ -25,6 +25,7 @@
 .homeText
 {
     position: absolute;
+    z-index:-1;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
@@ -40,6 +41,13 @@
     margin-right:10px;  
     border-radius: 5px; 
 }
+.carousel-item,
+.carousel-inner,
+.overlap,
+.homeText {
+    z-index: 1;
+}
+
 /******** end of slider *************/
 /*********** start of who we are *******/
 .who_we_are
@@ -101,6 +109,7 @@
 }
 .overlap-text{
     position: absolute;
+    z-index:-1;
     top:50%;
     left:50%;
     text-align: center;

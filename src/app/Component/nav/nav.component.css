@@ -9,9 +9,49 @@ nav button{
     background-color: transparent;
     border:2px solid var(--lightGray-color);
 }
+.navbar-toggler {
+    background-color: white; /* Set the background color of the button to white */
+    border-color: rgba(0, 0, 0, 0.1); /* Optional: Set a light border color */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Customize the icon to be darker for better contrast with the white background */
+  }
+  nav {
+    position: relative; /* or 'fixed' for a sticky effect */
+    z-index: 10;
+    width: 100%;
+    background-color: var(--main-color);
+}
+
+.carousel-item,
+.carousel-inner,
+.overlap,
+.homeText {
+    z-index: 1;
+}
+
+/* Your existing styles */
+
 
 @media (max-width: 991px) {
     nav a {
         color:black;
     }
 }
+@media (max-width: 767px) {
+    .navbar-nav {
+        padding:10px;
+      background-color:gray; /* Set the background color to blue */
+    }
+  
+    .navbar-nav .nav-link {
+      color: white; /* Set the text color to white */
+    }
+  
+    .navbar-nav .nav-link:hover {
+      color: #f8f9fa; /* Optional: Lighten the hover color for better visibility */
+    }
+  }
+  

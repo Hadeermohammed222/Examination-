@@ -1,13 +1,32 @@
 <div class="container pt-3">
+  <!-- Ensure ques_api is defined before trying to render questions -->
+  <div *ngIf="ques_api.length > 0">
     <div *ngFor="let dt of ques_api; let i = index">
-        <p>{{ i + 1 }}. {{ dt.question }}</p>
-        <div *ngFor="let option of dt.options">
-          <label>
-            <input type="radio" name="question-{{ i }}" [value]="option"> {{ option }}
-          </label>
-        </div>
+      <p>{{ i + 1 }}. {{ dt.question }}</p>
+      <div *ngFor="let option of dt.options">
+        <label>
+          <input
+            type="radio"
+            name="question-{{ i }}"
+            [value]="option"
+            (change)="onOptionSelected(option, i)"
+          >
+          {{ option }}
+        </label>
       </div>
-      <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
-      
-      <p>Your current score: {{ score }} / {{ques_api.length}}</p>
-</div>  
+    </div>
+
+    <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
+
+    <p *ngIf="score !== null" class="mt-3">Your current score: {{ score }} / {{ ques_api.length }}</p>
+  </div>
+
+  <!-- Optionally, display a loading message -->
+  <div *ngIf="ques_api.length === 0">
+    <p class="text-center mt-150">Loading questions...</p>
+  </div>
+</div>
+
+
+
+
